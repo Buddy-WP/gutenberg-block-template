@@ -1,0 +1,52 @@
+- pipeline: "Build and Release"
+  on: "CLICK"
+  refs:
+  - "refs/heads/master"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: "Lint"
+    type: "BUILD"
+    docker_image_name: "library/node"
+    docker_image_tag: "16"
+    execute_commands:
+    - "npm install"
+    - "npm run lint:css"
+    - "npm run lint:js"
+    - "npm run build"
+    cache_base_image: true
+    shell: "BASH"
+  - action: "Create zip"
+    type: "BUILD"
+    docker_image_name: "library/node"
+    docker_image_tag: "16"
+    execute_commands:
+    - "npm run plugin-zip"
+    cache_base_image: true
+    shell: "BASH"
+- pipeline: "Lint"
+  on: "EVENT"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/*"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: "Lint CSS"
+    type: "BUILD"
+    docker_image_name: "library/node"
+    docker_image_tag: "16"
+    execute_commands:
+    - "npm install"
+    - "npm run lint:css"
+    cache_base_image: true
+    shell: "BASH"
+  - action: "Lint JS"
+    type: "BUILD"
+    docker_image_name: "library/node"
+    docker_image_tag: "16"
+    execute_commands:
+    - "npm run lint:js"
+    cache_base_image: true
+    shell: "BASH"
