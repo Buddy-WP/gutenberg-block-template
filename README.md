@@ -12,7 +12,7 @@ npx @wordpress/create-block --template wp-block-directory-template
 
 ## Using with Buddy
 
-After creating a new project based on this template you'll get access to 3 pipelines:
+After creating a new project based on this template you'll get access to pipelines below:
 
 - **Build and Release** - it's responsible for testing, building and creating a zip file
 - **Lint** - it will constantly test your code
