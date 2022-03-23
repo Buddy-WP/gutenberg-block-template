@@ -7,7 +7,7 @@ Template to use with [`@wordpress/create-block`](https://www.npmjs.com/package/@
 This block template can be used by running the following command:
 
 ```bash
-npx @wordpress/create-block --template wp-block-directory-template
+npx @wordpress/create-block@next --template buddy-wp-block-directory-template
 ```
 
 ## Using with Buddy
