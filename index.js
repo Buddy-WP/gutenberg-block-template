@@ -2,8 +2,6 @@
  * External dependencies
  */
 const { join } = require( 'path' );
-const { hideBin } = require('yargs/helpers')
-
 
 module.exports = {
 	defaultValues: {
