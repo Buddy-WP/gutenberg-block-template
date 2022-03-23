@@ -5,11 +5,11 @@ const { join } = require( 'path' );
 
 module.exports = {
 	defaultValues: {
-		slug: 'gutenpride',
+		slug: 'gutenbuddy',
 		category: 'text',
-		title: 'Gutenpride',
+		title: 'GutenBuddy',
 		description:
-			'A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.',
+			'A demo Buddy block ',
 		dashicon: 'flag',
 		attributes: {
 			message: {
