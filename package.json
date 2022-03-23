@@ -1,6 +1,6 @@
 {
-	"name": "wp-block-directory-template",
-	"version": "0.2.0",
+	"name": "buddy-wp-block-directory-template",
+	"version": "0.2.1",
 	"description": "Template for scaffolding WordPress plugin optimized for usage with Block Directory.",
 	"author": "gziolo",
 	"license": "MIT",
@@ -11,21 +11,20 @@
 		"wordpress",
 		"gutenberg"
 	],
-	"homepage": "https://github.com/gziolo/wp-block-directory-template#readme",
+	"homepage": "https://github.com/Buddy-WP/gutenberg-block-template",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/gziolo/wp-block-directory-template.git"
+		"url": "git+https://github.com/Buddy-WP/gutenberg-block-template.git"
 	},
 	"bugs": {
-		"url": "https://github.com/gziolo/wp-block-directory-template/issues"
+		"url": "https://github.com/Buddy-WP/gutenberg-block-template/issues"
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^10.0.2",
 		"@wordpress/npm-package-json-lint-config": "^4.1.1",
 		"@wordpress/prettier-config": "^1.1.2",
 		"@wordpress/scripts": "^22.0.1",
-		"prettier": "npm:wp-prettier@2.2.1-beta-1",
-		"yargs": "^17.3.1"
+		"prettier": "npm:wp-prettier@2.2.1-beta-1"
 	},
 	"scripts": {
 		"format": "wp-scripts format",
